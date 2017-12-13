@@ -29,7 +29,7 @@ public class CsvDiffTool {
 			List<String> recordsB = Files.readAllLines(pathB);
 			
 			if (!recordsA.get(0).equals(recordsB.get(0))) {
-				System.out.println("Headers doesn't match!");
+				System.err.println("Headers doesn't match!");
 				System.exit(0);
 			}
 			String header = recordsA.get(0);
